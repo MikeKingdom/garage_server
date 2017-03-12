@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Garage</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script type="text/javascript" src="static/js/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="static/js/door.js"></script>
+</head>
+<body>
+<h1>Garage is <span id="state">{{ state }}</span></h1>
+{% if state == 'open' %}
+  <img id="door-state-open" src="/static/img/Open.png" class="img-button" onclick="door_close()"></img>
+  <img id="door-state-middle" src="/static/img/Middle.png" style="display:none;"></img>
+  <img id="door-state-closed" src="/static/img/Closed.png" style="display:none;"></img>
+{% elif state == 'closed' %}
+  <img id="door-state-open" src="/static/img/Open.png" class="img-button" onclick="door_close()" style="display:none;"></img>
+  <img id="door-state-middle" src="/static/img/Middle.png" style="display:none;"></img>
+  <img id="door-state-closed" src="/static/img/Closed.png" ></img>
+{% else %}
+  <img id="door-state-open" src="/static/img/Open.png" class="img-button" onclick="door_close()" style="display:none;"></img>
+  <img id="door-state-middle" src="/static/img/Middle.png"></img>
+  <img id="door-state-closed" src="/static/img/Closed.png" style="display:none;"></img>
+{% endif %}
+  <a onclick="door_open()">Open</a>
+<h2>Temperature is <span id="temperature">{{ temperature }}</span>F</h2>
+<!-- <img id="camera" width="100%" src="http://garage.local:8080/?action=stream"></img> -->
+<img id="camera" width="100%" src="get_image" />
+</body>
+</html>

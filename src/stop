@@ -1,0 +1,3 @@
+#!/bin/sh
+svc -d /etc/service/garage
+

@@ -1,0 +1,10 @@
+body {
+  padding: 40px;
+}
+
+#close-button {
+/*  width: 100%;*/
+  border-style: outset;
+  border-radius: 10px;
+  border-width: thick;
+}

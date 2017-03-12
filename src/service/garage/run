@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /home/pi/garage/garagemonitor
+exec python app.py 2>&1
